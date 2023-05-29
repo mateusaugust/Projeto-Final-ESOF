@@ -24,9 +24,49 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
     crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="./Utils/scrollBar.css">
+    <script src="main.js"></script>
     <script src="jquery-3.7.0.min.js"></script>
   </head>
-  <body>
-    
+
+  <body style="
+    background-color: #f0f0d8;
+  ">
+      <div 
+      class="custom-scrollbar"
+      style="
+         border-radius: 10px;
+         background-color: #FFFFFF;
+         display: flex;
+         justify-content: center;
+         width: 70%;
+         margin-left: 29%;
+         margin-top: 1%;
+         height: 96vh; 
+         overflow-y: scroll;
+        ">
+
+
+        <table class="table table-hover container" 
+        
+        >
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CNPJ</th>
+              <th scope="col">CPF_FUNC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>Otto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
   </body>
 </html>
