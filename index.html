@@ -25,7 +25,9 @@
     crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./Utils/scrollBar.css">
+    <link rel="stylesheet" href="./Utils/telaBloqueada.css">
     <script src="main.js"></script>
+    <script src="./Utils/telaBloaqueada.js"></script>
     <script src="jquery-3.7.0.min.js"></script>
   </head>
 
@@ -59,9 +61,21 @@
     top: 90vh;">
 
       <div class="text-center">
-        <button class="btn btn-primary mb-2" type="submit">Botão 1</button>
-        <button class="btn btn-primary mb-2" type="submit">Botão 2</button>
-        <button class="btn btn-primary mb-2" type="submit">Botão 3</button>
+        <button class="btn btn-primary mb-2" type="submit">Deletar</button>
+        <button class="btn btn-primary mb-2" type="submit">Editar</button>
+        <button class="btn btn-primary mb-2" type="submit">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+
+      <div class="overlay-message">
+        <div class="card" style="width: 10rem;height: 15rem;">
+          <img class="card-img-top" src="./Utils/alert.gif" alt="Alert">
+          <div class="card-body">
+            <p class="card-text">Proporção minima atingida!</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
