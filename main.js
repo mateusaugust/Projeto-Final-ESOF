@@ -1,39 +1,66 @@
-function Empresa(id,nome,cnpj, cpfFuncionario){
+function Empresa(id,nome,cnpj,senha,razao, endereco, cidade, estado, cep ){
   this.id=id;
   this.nome=nome;
   this.cnpj=cnpj
-  this.cpfFuncionario = cpfFuncionario;
+  this.senha=senha
+  this.razao=razao;
+  this.endereco=endereco;
+  this.cidade=cidade;
+  this.estado=estado;
+  this.cep=cep;
 }
 
-function Cadastro(empresa,cnpj){
-    this.empresa=empresa;
-    this.cnpj=cnpj;
-}
+let bdEmpresa = [
+  new Empresa(1, "Teste", "12345", "456","Teste", "Rua Tupis n 1102", "Guimarania", 
+  "Minas Gerais(MG)", "38730-000" ),
 
-var dados =[
-  new Empresa(1,"Empresa1", "CNPJ1","123456789-13"),
-  new Empresa(2,"Empresa2", "CNPJ2","123456789-13"),
-  new Empresa(3,"Empresa3", "CNPJ3","123456789-13"),
-  new Empresa(4,"Empresa4", "CNPJ5","123456789-13"),
-  new Empresa(5,"Empresa6", "CNPJ6","123456789-13"),
-  new Empresa(6,"Empresa7", "CNPJ7","123456789-13"),
-  new Empresa(7,"Empresa8", "CNPJ8","123456789-13")
-]
+  new Empresa(2, "Teste", "1234","789","Teste", "Rua Tupis n 1102", "Guimarania", 
+  "Minas Gerais(MG)", "38730-000" ),
 
-var dadosEmpresa =[
-  new Cadastro("Teste","123")
-]
+  new Empresa(3, "Teste", "123","321","Teste", "Rua Tupis n 1102", "Guimarania", 
+  "Minas Gerais(MG)", "38730-000" )
+];
 
-
-$(document).ready(function() {
+$(document).ready(function() {//Volta para pagina principal;
   $("#voltar").click(function() {
     window.location.href = "../index.html";
   });
 });
 
-$(document).ready(function(){
-  $('#login').click(function(){
 
+let = countId = 0;
+$(document).ready(function(){//Cadastrar e Verificar se Ja tem cnpj cadastrado;
+  const getFinalObject = bdEmpresa[bdEmpresa.length-1];
+  countId = getFinalObject.id;
+
+  $('#salvar').click(function(){
+    const inputCnpj = String($('#inputCnpj').val());
+    var sinc = 0;
+
+   $.map(bdEmpresa, function(elemento, indice) {
+      if(elemento.cnpj === inputCnpj){
+        $('#alert').show();
+        sinc = 1;
+      }else{
+        $('#alert').hide();
+      }
+    });
+    
+    if(sinc === 0){
+      const insertBd = new Empresa(countId+1,String($('#inputName').val()),
+      String($('#inputCnpj').val()), String($('#inputPassword').val()),String($('#inputRazao').val()),
+      String($('#inputEnde').val()),String($('#inputCity').val()),String($('#inputEstado').val())
+      ,String($('#inputCEP').val())
+      );
+      bdEmpresa.push(insertBd);
+    } 
   });
 });
+
+
+$(document).ready(function(){//Botão Login e Autentificação;
+
+
+});
+
 

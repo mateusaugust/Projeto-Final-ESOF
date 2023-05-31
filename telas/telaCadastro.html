@@ -35,33 +35,33 @@
     <form>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Nome Empresa</label>
-          <input type="Text" class="form-control" placeholder="Nome Empresa">
+          <label for="inputEmail4">Nome Empresa(Fantasia)</label>
+          <input id="inputName" type="Text" class="form-control" placeholder="Nome Empresa" required>
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Senha</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
         </div>
       </div>
       <div class="form-group">
         <label for="inputAddress">CNPJ</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="CNPJ">
+        <input type="text" class="form-control" id="inputCnpj" placeholder="CNPJ" required>
       </div>
 
       <div class="form-group">
         <label for="inputAddress">Razão Social</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Razão Social">
+        <input type="text" class="form-control" id="inputRazao" placeholder="Razão Social" required>
       </div>
 
       <div class="form-group">
         <label for="inputAddress2">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Rua dos Bobos, nº 0">
+        <input type="text" class="form-control" id="inputEnde" placeholder="Rua dos Bobos, nº 0" required>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity">Cidade</label>
-          <input type="text" class="form-control" id="inputCity">
+          <input type="text" class="form-control" id="inputCity" required>
         </div>
 
         <div class="form-group col-md-4">
@@ -99,14 +99,18 @@
         </div>
         <div class="form-group col-md-2">
           <label for="inputCEP">CEP</label>
-          <input type="text" class="form-control" id="inputCEP">
+          <input type="text" class="form-control" id="inputCEP" required>
         </div>
       </div>
       <button id="voltar"type="button"class="btn btn-primary">Voltar</button>
-      <button type="submit" class="btn btn-primary">Entrar</button>
+      <button type="submit" id="salvar" class="btn btn-primary">Salvar</button>
     </form>
-
   </div>
+
+  <div id="alert"class="alert alert-danger" role="alert" style="display: none;">
+    Essa empresa já esta cadastrada
+  </div>
+
   <div class="overlay" id="overlay">
     <div class="overlay-message">
       <div class="card" style="width: 10rem;height: 15rem;">
