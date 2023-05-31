@@ -11,13 +11,13 @@ function Empresa(id,nome,cnpj,senha,razao, endereco, cidade, estado, cep ){
 }
 
 let bdEmpresa = [
-  new Empresa(1, "Teste", "12345", "456","Teste", "Rua Tupis n 1102", "Guimarania", 
+  new Empresa(1, "Teste1", "12345", "456","Teste", "Rua Tupis n 1102", "Guimarania", 
   "Minas Gerais(MG)", "38730-000" ),
 
-  new Empresa(2, "Teste", "1234","789","Teste", "Rua Tupis n 1102", "Guimarania", 
+  new Empresa(2, "Teste2", "1234","789","Teste", "Rua Tupis n 1102", "Guimarania", 
   "Minas Gerais(MG)", "38730-000" ),
 
-  new Empresa(3, "Teste", "123","321","Teste", "Rua Tupis n 1102", "Guimarania", 
+  new Empresa(3, "Teste3", "123","321","Teste", "Rua Tupis n 1102", "Guimarania", 
   "Minas Gerais(MG)", "38730-000" )
 ];
 
@@ -25,8 +25,11 @@ $(document).ready(function() {//Volta para pagina principal;
   $("#voltar").click(function() {
     window.location.href = "../index.html";
   });
-});
 
+  $("#closeDemanda").click(function(){
+    window.location.href = "../index.html";
+  });
+});
 
 let = countId = 0;
 $(document).ready(function(){//Cadastrar e Verificar se Ja tem cnpj cadastrado;
@@ -34,13 +37,14 @@ $(document).ready(function(){//Cadastrar e Verificar se Ja tem cnpj cadastrado;
   countId = getFinalObject.id;
 
   $('#salvar').click(function(){
-    const inputCnpj = String($('#inputCnpj').val());
+    const input = String($('#inputCnpj').val());
     var sinc = 0;
 
-   $.map(bdEmpresa, function(elemento, indice) {
-      if(elemento.cnpj === inputCnpj){
+   $.each(bdEmpresa, function(indice,elemento) {
+      if(elemento.cnpj === input){
         $('#alert').show();
         sinc = 1;
+        return false
       }else{
         $('#alert').hide();
       }
@@ -57,10 +61,28 @@ $(document).ready(function(){//Cadastrar e Verificar se Ja tem cnpj cadastrado;
   });
 });
 
+var controler = 0;
+var idLock = -1;
 
-$(document).ready(function(){//Botão Login e Autentificação;
+$(document).ready(function(){//Autentificação;
+  $('#login').click(function(){
+    $.each(bdEmpresa, function(index,empresa){
+      if(String($('#cnpjLogin').val())===empresa.cnpj && 
+         String($('#passwordLogin').val())===empresa.senha){
+        
+        $('#alert2').hide();
+        idLock =Number(empresa.id);
+        return false;
+      }else{
+       $('#alert2').show();
+        idLock = Number(-1);
+      }
+    });
 
-
+    if(idLock > -1){
+      window.location.href="./telas/demandas.html";
+    }
+  });
 });
 
 

@@ -31,6 +31,12 @@
     <script src="jquery-3.7.0.min.js"></script>
 </head>
 <body style="background-color:#d8d8c0;">
+
+  <div id="alert" class="alert alert-danger" role="alert" style="margin-bottom: -3%;text-align: 
+  center;display: none;">
+    Essa empresa já esta cadastrada
+  </div>
+  
   <div style=" display: flex;justify-content: center;margin-top:5%;">
     <form>
       <div class="form-row">
@@ -105,10 +111,6 @@
       <button id="voltar"type="button"class="btn btn-primary">Voltar</button>
       <button type="submit" id="salvar" class="btn btn-primary">Salvar</button>
     </form>
-  </div>
-
-  <div id="alert"class="alert alert-danger" role="alert" style="display: none;">
-    Essa empresa já esta cadastrada
   </div>
 
   <div class="overlay" id="overlay">

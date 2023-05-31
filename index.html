@@ -34,11 +34,11 @@
     <form>
       <div class="form-group">
         <label for="exampleInputEmail1">CNPJ</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CNPJ">
+        <input type="email" class="form-control" id="cnpjLogin" aria-describedby="emailHelp" placeholder="CNPJ">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+        <input type="password" class="form-control" id="passwordLogin" placeholder="Senha">
       </div>
       <div class="form-group form-check">
       </div>
@@ -50,9 +50,11 @@
   justify-content: center;
   ">Ainda não tem um cadastro? <a href="telas/telaCadastro.html">Cadastre-se</a></span>
 
-<div id="alert2"class="alert alert-danger" role="alert" style="display: none;">
-  Empresa não cadastrada ou CNPJ/Senha incorretos.
-</div>
+  <div id="alert2"class="alert alert-danger" role="alert" style= "text-align: center;
+  margin-top: 30px;display: none;
+  ;">
+    Empresa não cadastrada ou CNPJ/Senha incorretos.
+  </div>
 
   <div class="overlay" id="overlay">
     <div class="overlay-message">
