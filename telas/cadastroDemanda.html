@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcReci</title>  
+    
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../Utils/telaBloqueada.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../main.js"></script>
+    <script src="../Utils/telaBloaqueada.js"></script>
+    <script src="jquery-3.7.0.min.js"></script>
+</head>
+<body style="background-color:#d8d8c0;">
+<h2 style="text-align: center;
+margin-top: 2%;">Dados Funcionario</h2>
+<div style="
+  align-items: center;
+  display: flex; 
+  justify-content: center;
+ ">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nome</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">CPF</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="CPF" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Data Admissão</label>
+        <input type="date" class="form-control" id="inputEmail4"  required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Jornada Mensal</label>
+        <input type="number" class="form-control" id="inputPassword4" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Salario</label>
+        <input type="Number" class="form-control" id="inputEmail4"  required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Dependente</label>
+        <input type="number" class="form-control" id="inputPassword4" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="inputPassword4">Ferias Vencidas</label>
+          <input type="number" class="form-control" id="inputPassword4" required>
+        </div>
+      </div>
+
+    <h4 style="text-align: center;">Vantagens</h4>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEstado">Periculosidade</label>
+        <select id="inputEstado" class="form-control">
+          <option selected>Escolher...</option>
+          <option>Sim</option>
+          <option>Não</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Insalubridade</label>
+        <input type="range" id="porcentagem" name="porcentagem" min="0" max="100" step="1"required>
+        <output for="porcentagem" id="porcentagem-output">0%</output>
+      </div>
+    </div>
+    
+      
+  </form>
+  
+
+</div>
+  
+
+  
+  <div class="overlay" id="overlay">
+    <div class="overlay-message">
+      <div class="card" style="width: 10rem;height: 15rem;">
+        <img class="card-img-top" src="../Utils/alert.gif" alt="Alert">
+        <div class="card-body">
+          <p class="card-text">Proporção minima atingida!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
