@@ -27,17 +27,21 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../main.js"></script>
+    <script src="showBottonCalc.js"></script>
     <script src="../Utils/telaBloaqueada.js"></script>
     <script src="jquery-3.7.0.min.js"></script>
 </head>
 <body style="background-color:#d8d8c0;">
+
 <h2 style="text-align: center;
 margin-top: 2%;">Dados Funcionario</h2>
+
 <div style="
   align-items: center;
   display: flex; 
   justify-content: center;
  ">
+
   <form>
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -83,24 +87,64 @@ margin-top: 2%;">Dados Funcionario</h2>
 
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEstado">Periculosidade</label>
-        <select id="inputEstado" class="form-control">
-          <option selected>Escolher...</option>
-          <option>Sim</option>
-          <option>Não</option>
+        <label for="inputEstado">Periculosidade</label><br>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">30%</label>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Insalubridade</label><br>
+        <input type="radio" id="opcao1" name="grupo-opcoes" value="10">
+        <label for="opcao1">10%</label>
+  
+        <input type="radio" id="opcao2" name="grupo-opcoes" value="20">
+        <label for="opcao2">20%</label>
+        
+        <input type="radio" id="opcao3" name="grupo-opcoes" value="40">
+        <label for="opcao3">40%</label><br>
+      </div>
+    </div>
+
+    <h2 style="text-align: center;margin-top: 2%;">Dados Demanda</h2>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEstado">Tipo de Recisão</label>
+        <select id="inputEstado" class="form-control" required>
+          <option selected></option>
+          <option>Dispensa sem justa causa</option>
+          <option>Pedido de demissão</option>
         </select>
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Insalubridade</label>
-        <input type="range" id="porcentagem" name="porcentagem" min="0" max="100" value="0"step="1"required>
-        <output for="porcentagem" id="porcentagem-output">0%</output>
+        <label for="inputEstado">Tipo de Aviso</label>
+        <select id="inputEstado" class="form-control" required>
+          <option selected></option>
+          <option>Aviso Trabalho</option>
+          <option>Indenizado</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Data Demissão</label>
+        <input type="date" class="form-control" id="inputEmail4"  required>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Hora Extra 50%</label>
+        <input type="number" class="form-control" id="inputPassword4" required>
       </div>
     </div>
-    
-      
-  </form>
-  
 
+    
+    <div style="margin-top: 5%;margin-bottom: 50px;">
+      <button id="voltarListaDemanda"type="button"class="btn btn-primary">Voltar</button>
+      <button id="calc"type="button"class="btn btn-primary" style="display: none;">Calcular</button>
+      <button type="button" id="salvarDemanda" class="btn btn-primary">Salvar</button>
+    </div> 
+
+    
+  </form>
 </div>
   
 

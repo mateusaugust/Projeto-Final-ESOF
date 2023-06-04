@@ -21,11 +21,7 @@ let bdEmpresa = [
   "Minas Gerais(MG)", "38730-000" )
 ];
 
-$(document).ready(function() {//Barra de Porcentagem cadastro demanda
-  $('#porcentagem').on('input', function() {
-    $('#porcentagem-output').text($(this).val() + "%");
-  });
-});
+
 
 $(document).ready(function() {//Volta para pagina principal ou ir para outras;
   $("#voltar").click(function() {
@@ -38,7 +34,19 @@ $(document).ready(function() {//Volta para pagina principal ou ir para outras;
 
   $("#addDemand").click(function(){
     window.location.href="./cadastroDemanda.html";
+    localStorage.setItem("exibirBotao", "false");
   });
+
+  $("#voltarListaDemanda").click(function(){
+    window.location.href = "./demandas.html";
+  });
+
+  $("#btnedit").click(function(){
+    window.location.href="./cadastroDemanda.html";
+    localStorage.setItem("exibirBotao", "true");
+  });
+
+ 
 });
 
 let = countId = 0;
