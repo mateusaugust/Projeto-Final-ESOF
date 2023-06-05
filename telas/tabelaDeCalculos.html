@@ -33,9 +33,6 @@
 
   <body style="background-color: #f0f0d8;">
 
-    <button id="closeDemanda" style="margin-top: 1%; margin-left: 2%;"type="button" class="btn btn-light">Sair</button>
-    <button id="tableCalc" style="margin-top: 1%;"type="button" class="btn btn-light">Tabela Calculos</button>
-
     <div class="custom-scrollbar" style="border-radius: 10px; background-color: #FFFFFF; 
     display:flex; justify-content: center; 
     width: 70%; margin-top: 1%; margin-right: 2%; 
@@ -45,15 +42,17 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">CNPJ</th>
-            <th scope="col">CPF_FUNC</th>
+            <th scope="col">Discriminação</th>
+            <th scope="col">Referência</th>
+            <th scope="col">Proventos</th>
+            <th scope="col">Descontos</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
+            <th scope="row">123456</th>
             <td>Mark</td>
+            <td>Otto</td>
             <td>Otto</td>
             <td>Otto</td>
           </tr>
@@ -61,15 +60,7 @@
       </table>
     </div> 
 
-    <div class="d-flex flex-column justify-content-center" 
-    style="position: absolute; width: 27vw; 
-    top: 90vh;">
-      <div class="text-center">
-        <button style ="background-color: #b40c04; border-color: #b40c04;"class="btn btn-primary mb-2" type="submit">Deletar</button>
-        <button id="btnedit"class="btn btn-primary mb-2" type="button" >Editar/Calcular</button>
-        <button id="addDemand" style ="background-color: #318c24; border-color: #318c24;"class="btn btn-primary mb-2" type="button">Adicionar</button>
-      </div>
-    </div>
+  <button style="margin-top: 1%; margin-left: 2%;" id="voltarListaDemanda"type="button"class="btn btn-primary">Voltar</button>
 
     <div class="overlay" id="overlay">
       <div class="overlay-message">

@@ -32,13 +32,13 @@ $(document).ready(function() {//Volta para pagina principal ou ir para outras;
     window.location.href = "../index.html";
   });
 
+  $("#voltarListaDemanda").click(function(){
+    window.location.href = "./demandas.html";
+  });
+
   $("#addDemand").click(function(){
     window.location.href="./cadastroDemanda.html";
     localStorage.setItem("exibirBotao", "false");
-  });
-
-  $("#voltarListaDemanda").click(function(){
-    window.location.href = "./demandas.html";
   });
 
   $("#btnedit").click(function(){
@@ -46,6 +46,10 @@ $(document).ready(function() {//Volta para pagina principal ou ir para outras;
     localStorage.setItem("exibirBotao", "true");
   });
 
+  $("#tableCalc").click(function(){
+    window.location.href="./tabelaDeCalculos.html";
+
+  });
  
 });
 
