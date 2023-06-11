@@ -38,41 +38,41 @@
   </div>
   
   <div style=" display: flex;justify-content: center;margin-top:5%;">
-    <form>
+    <form action="../funcoes/salvaCadEmpresa.php" method="GET">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Nome Empresa(Fantasia)</label>
-          <input id="inputName" type="Text" class="form-control" placeholder="Nome Empresa" required>
+          <input name="nomeEmpresa" type="Text" class="form-control" placeholder="Nome Empresa" required>
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Senha</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
+          <input type="password" class="form-control" name="senha" placeholder="Senha" required>
         </div>
       </div>
       <div class="form-group">
         <label for="inputAddress">CNPJ</label>
-        <input type="text" class="form-control" id="inputCnpj" placeholder="CNPJ" required>
+        <input type="text" class="form-control" name="cnpj" placeholder="CNPJ" required>
       </div>
 
       <div class="form-group">
         <label for="inputAddress">Razão Social</label>
-        <input type="text" class="form-control" id="inputRazao" placeholder="Razão Social" required>
+        <input type="text" class="form-control" name="razaoSocial" placeholder="Razão Social" required>
       </div>
 
       <div class="form-group">
         <label for="inputAddress2">Endereço</label>
-        <input type="text" class="form-control" id="inputEnde" placeholder="Rua dos Bobos, nº 0" required>
+        <input type="text" class="form-control" name="endereco" placeholder="Rua dos Bobos, nº 0" required>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity">Cidade</label>
-          <input type="text" class="form-control" id="inputCity" required>
+          <input type="text" class="form-control" name="cidade" required>
         </div>
 
         <div class="form-group col-md-4">
           <label for="inputEstado">Estado</label>
-          <select id="inputEstado" class="form-control">
+          <select name="estado" class="form-control">
             <option selected>Escolher...</option>
             <option>Acre (AC)</option>
             <option>Alagoas (AL)</option>
@@ -105,7 +105,7 @@
         </div>
         <div class="form-group col-md-2">
           <label for="inputCEP">CEP</label>
-          <input type="text" class="form-control" id="inputCEP" required>
+          <input type="text" class="form-control" name="cep" required>
         </div>
       </div>
       <button id="voltar"type="button"class="btn btn-primary">Voltar</button>

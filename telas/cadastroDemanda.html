@@ -36,50 +36,58 @@
 <h2 style="text-align: center;
 margin-top: 2%;">Dados Funcionario</h2>
 
+
 <div style="
   align-items: center;
   display: flex; 
   justify-content: center;
  ">
 
-  <form>
+<form action="../funcoes/addDemanda.php">
+
+  <div  style="text-align: center; margin-bottom: 20px;" >
+    <span id="conteudo"></span>
+  <input style="width: 150px;
+  outline:none; border:none; background-color: #d8d8c0;" name="cnpjEmpre"  id="cnpjEmpre" readonly >
+</div>
+
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Nome</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome" required>
+        <input type="text" class="form-control" name="nomeFunc" placeholder="Nome" required>
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">CPF</label>
-        <input type="text" class="form-control" id="inputPassword4" placeholder="CPF" required>
+        <input type="text" class="form-control" name="cpf" placeholder="CPF" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Data Admissão</label>
-        <input type="date" class="form-control" id="inputEmail4"  required>
+        <input type="date" class="form-control" name="dataAdmi"  required>
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Jornada Mensal</label>
-        <input type="number" class="form-control" id="inputPassword4" required>
+        <input type="number" class="form-control" name="jornada" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Salario</label>
-        <input type="Number" class="form-control" id="inputEmail4"  required>
+        <input type="Number" class="form-control" name="salario"  required>
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Dependente</label>
-        <input type="number" class="form-control" id="inputPassword4" required>
+        <input type="number" class="form-control" name="dependete" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
           <label for="inputPassword4">Ferias Vencidas</label>
-          <input type="number" class="form-control" id="inputPassword4" required>
+          <input type="number" class="form-control" name="feriasVencidas" required>
         </div>
       </div>
 
@@ -88,19 +96,21 @@ margin-top: 2%;">Dados Funcionario</h2>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEstado">Periculosidade</label><br>
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input value="30"type="checkbox" class="form-check-input" name="periculosidade">
         <label class="form-check-label" for="exampleCheck1">30%</label>
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputPassword4">Insalubridade</label><br>
-        <input type="radio" id="opcao1" name="grupo-opcoes" value="10">
+        <input type="radio" id="opcao0" name="insalubridade" value="0" checked style="display: none;">
+
+        <input type="radio" id="opcao1" name="insalubridade" value="10">
         <label for="opcao1">10%</label>
   
-        <input type="radio" id="opcao2" name="grupo-opcoes" value="20">
+        <input type="radio" id="opcao2" name="insalubridade" value="20">
         <label for="opcao2">20%</label>
         
-        <input type="radio" id="opcao3" name="grupo-opcoes" value="40">
+        <input type="radio" id="opcao3" name="insalubridade" value="40">
         <label for="opcao3">40%</label><br>
       </div>
     </div>
@@ -109,16 +119,16 @@ margin-top: 2%;">Dados Funcionario</h2>
 
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputEstado">Tipo de Recisão</label>
-        <select id="inputEstado" class="form-control" required>
+        <label for="inputRecisao">Tipo de Recisão</label>
+        <select name="inputRecisao" class="form-control" required>
           <option selected></option>
           <option>Dispensa sem justa causa</option>
           <option>Pedido de demissão</option>
         </select>
       </div>
       <div class="form-group col-md-6">
-        <label for="inputEstado">Tipo de Aviso</label>
-        <select id="inputEstado" class="form-control" required>
+        <label for="inputAviso">Tipo de Aviso</label>
+        <select name="inputAviso" class="form-control" required>
           <option selected></option>
           <option>Aviso Trabalho</option>
           <option>Indenizado</option>
@@ -126,13 +136,13 @@ margin-top: 2%;">Dados Funcionario</h2>
       </div>
 
       <div class="form-group col-md-6">
-        <label for="inputEmail4">Data Demissão</label>
-        <input type="date" class="form-control" id="inputEmail4"  required>
+        <label for="inputDataDemi">Data Demissão</label>
+        <input type="date" class="form-control" name="inputDataDemi"  required>
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputPassword4">Hora Extra 50%</label>
-        <input type="number" class="form-control" id="inputPassword4" required>
+        <input type="number" class="form-control" name="inputHoraExtra" required>
       </div>
     </div>
 
@@ -140,7 +150,7 @@ margin-top: 2%;">Dados Funcionario</h2>
     <div style="margin-top: 5%;margin-bottom: 50px;">
       <button id="voltarListaDemanda"type="button"class="btn btn-primary">Voltar</button>
       <button id="calc"type="button"class="btn btn-primary" style="display: none;">Calcular</button>
-      <button type="button" id="salvarDemanda" class="btn btn-primary">Salvar</button>
+      <button type="submit" id="salvarDemanda" class="btn btn-primary">Salvar</button>
     </div> 
   </form>
 </div>
