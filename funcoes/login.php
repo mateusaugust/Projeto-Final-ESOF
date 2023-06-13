@@ -17,6 +17,7 @@ if (mysqli_num_rows($resultado) == 1) {
 } else {
    
     header("Location: ../index.html");
+    header("Location: ../index.html");
     exit();
 
   
