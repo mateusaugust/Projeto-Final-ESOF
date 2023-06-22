@@ -81,7 +81,7 @@ function contarDomingos($dataInicio, $dataFim) {
 //monta data
 function montarData($dia, $mes, $ano) {
     $data = sprintf('%04d-%02d-%02d', $ano, $mes, $dia);
-    return $data;
+	return $data;
 }
 
 
@@ -146,36 +146,42 @@ function avos13($dtAdmissão,$dtDemissao){
 	return $qtAvos;
 }
 
-//avos de férias
-function avosFerias($dtAdmissão, $dtDemissão){
+//avos de férias tem que ser revisada pois esta calculando errado
+function avosFerias($dtAdmissao, $dtDemissao){
 	
-$dt1 = adicionarDias(montarData(extrairInformacao($dtAdmissão,'d'),extrairInformacao($dtAdmissão,"m"),extrairInformacao($dtDemissão,'a')),-1);
+$dt1 = adicionarDias(montarData(extrairInformacao($dtAdmissao,'d'),extrairInformacao($dtAdmissao,"m"),extrairInformacao($dtDemissao,'a')),0);
 
-	if (compararDatas($dtDemissão,$dt1)){
-		$dtInicio = adicionarDias(montarData(extrairInformacao($dtAdmissão,'d'),extrairInformacao($dtAdmissão,"m"),extrairInformacao($dtDemissão,'a')),-1);
-		
-	}else{
-		
-		$dtInicio = adicionarDias(montarData(extrairInformacao($dtAdmissão,'d'),extrairInformacao($dtAdmissão,"m"),intval(extrairInformacao($dtDemissão,'a')-1)),-1);
+	if (compararDatas($dtDemissao,$dt1)){
+		$dtInicio = adicionarDias(montarData(extrairInformacao($dtAdmissao,'d'),extrairInformacao($dtAdmissao,"m"),extrairInformacao($dtDemissao,'a')),-1);	
+	}else{		
+		$dtInicio = adicionarDias(montarData(extrairInformacao($dtAdmissao,'d'),extrairInformacao($dtAdmissao,"m"),intval(extrairInformacao($dtDemissao,'a')-1)),-1);
 	}	
+
 	$contAvos=0;
 	$aux=0;
 	$ultimoAvo=0;
-	$i = 0;
+	$i = 1;
+
+for ($i; $i < 13; $i++) {
 	
-for ($i; $i < 12; $i++) {
-    if(compararDatas($dtDemissão,adicionarMeses($dtInicio,$i))){
+    if(compararDatas($dtDemissao,adicionarMeses($dtInicio,$i))){
+
+		//echo $dtDemissao . "<br>";
+		//echo $dtDemissao . " e maior " . adicionarMeses($dtInicio,$i) . "<br>";
+
     	$contAvos = $contAvos+1;
     }else{
-    	$t = diferencaDias($dtDemissão,adicionarMeses($dtInicio,$i));
+    	//echo "A data comparada por ultimo" . adicionarMeses($dtInicio,$i-1) . "<br>";
+		
+		$t = diferencaDias($dtDemissao,adicionarMeses($dtInicio,$i));
 		if(($aux==0) && ($t>14)){
 		$aux=1;
 		$ultimoAvo=1;
-	}
-    	
+	}   	
     }
 }
 echo $contAvos+$ultimoAvo;
+return $contAvos+$ultimoAvo;
 }
 
 //calculo de férias proporcionais
@@ -208,7 +214,7 @@ function calculaValorAvisoPrevioIndenizado($baseCalculo,$diasAviso){
 
 //calcula valor de horas extras
 function caluloHorasExtras($baseCalc,$divisor,$quantHoras, $adicionalHE){
-	$valorHorasExtras = $baseCalc / $divisor * $quantHoras * $adicionalHE;
+	$valorHorasExtras = ($baseCalc / $divisor) * $quantHoras * (1+($adicionalHE/100));
 	
 	return $valorHorasExtras;
 }
