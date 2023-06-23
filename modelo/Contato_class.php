@@ -3,7 +3,7 @@
 	//classe entidade	
 		
 		private $id;
-		private $cnj;
+		private $cnpj;
 		private $nome;
 		private $cpf;
 		private $data_admissao;
@@ -17,6 +17,7 @@
 		private $tipo_aviso;
 		private $data_demissao;
 		private $quant_hora_extra;
+		private $SaldoFGTS;
 
 		
 		public function __construct(){
@@ -103,11 +104,11 @@
 		}
 
 		public function setAdicInsalubridade($adic_insalubridade){
-			$this->adic$adic_insalubridade = $adic_insalubridade;
+			$this->$adic_insalubridade = $adic_insalubridade;
 		}
 		
 		public function getAdicInsalubridade(){
-			return $this->adic$adic_insalubridade;
+			return $this->adic_insalubridade;
 		}
 
 		public function setTipoTrct($tipo_trct){
@@ -115,7 +116,7 @@
 		}
 		
 		public function getTipoTrct(){
-			return $this->$tipo_trct;
+			return $this->tipo_trct;
 		}
 
 		public function setTipoAviso($tipo_aviso){
@@ -131,15 +132,25 @@
 		}
 		
 		public function getDataDemissao(){
-			return $this->$data_demissao;
+			return $this->data_demissao;
 		}
 
 		public function setQuantHoraExtra($quant_hora_extra){
-			$this->$quant_hora_extra = $quant_hora_extra;
+			$this->quant_hora_extra = $quant_hora_extra;
 		}
 		
+		
 		public function getQuantHoraExtra(){
-			return $this->$quant_hora_extra;
+			return $this->adic_insalubridade;
+		}
+
+				public function setSaldoFGTS($SaldoFGTS){
+			$this->SaldoFGTS = $SaldoFGTS;
+		}
+		
+		
+		public function getSaldoFGTS(){
+			return $this->SaldoFGTS;
 		}
 	}
 ?>

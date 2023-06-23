@@ -7,13 +7,23 @@
 				//formulário enviar foi enviado
 				
 				$c = new Funcionario();
-				$c->setId($_POST["id"]);
-				$c->setNome($_POST["nome"]);
-				$c->setCpf($_POST["cpf"]);
-				$c->setTelefone($_POST["telefone"]);
-				$c->setEmail($_POST["email"]);
-				$c->setDataNascimento($_POST["data_nascimento"]);
-				$c->setSexo($_POST["sexo"]);
+	
+				$c->setId($_POST["ID"]);
+				$c->setCnpj($_POST["CNPJ"]);
+				$c->setNome($_POST["NOME"]);
+				$c->setCpf($_POST["CPF"]);
+				$c->setDataAdmissao($_POST["DATA_ADMISSAO"]);
+				$c->setJornadaMensal($_POST["JORNADA_MENSAL"]);
+				$c->setSalario($_POST["SALARIO"]);
+				$c->setQuantDependente($_POST["QUANT_DEPENDENTE"]);
+				$c->setFeriasVencidas($_POST["FERIAS_VENCIDAS"]);
+				$c->setAdPericulosidade($_POST["AD_PERICULOSIDADE"]);
+				$c->setAdicInsalubridade($_POST["ADIC_INSALUBRIDADE"]);
+				$c->setTipoTrct($_POST["TIPO_TRCT"]);
+				$c->setTipoAviso($_POST["TIPO_AVISO"]);
+				$c->setDataDemissao($_POST["DATA_DEMISSAO"]);
+				$c->setQuantHoraExtra($_POST["QUANT_HORA_EXTRA"]);
+				$c->setSaldoFGTS($_POST["SALDO_FGTS"]);
 			
 				
 				$dao = new ContatoDAO();
