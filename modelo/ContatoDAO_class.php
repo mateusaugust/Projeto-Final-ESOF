@@ -19,11 +19,9 @@
 		public function cadastrar($cont){
 			try{
 				$stmt = $this->con->prepare(
-				"INSERT INTO caddemandas(, cpf,telefone, email,data_nascimento, sexo)
-				VALUES (:,:cpf , :telefone, :email, :data_nascimento, :sexo)");
-
-"INSERT INTO caddemandas(CNPJ, NOME, CPF, DATA_ADMISSAO, JORNADA_MENSAL, SALARIO, QUANT_DEPENDENTE, FERIAS_VENCIDAS, AD_PERICULOSIDADE, ADIC_INSALUBRIDADE, TIPO_TRCT, TIPO_AVISO, DATA_DEMISSAO, QUANT_HORA_EXTRA, SALDO_FGTS)
-VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]')";
+				"INSERT INTO caddemandas(CNPJ, NOME, CPF, DATA_ADMISSAO, JORNADA_MENSAL, SALARIO, QUANT_DEPENDENTE, FERIAS_VENCIDAS, AD_PERICULOSIDADE, ADIC_INSALUBRIDADE, TIPO_TRCT, TIPO_AVISO, DATA_DEMISSAO, QUANT_HORA_EXTRA, SALDO_FGTS)
+				VALUES (:CNPJ,:NOME,:CPF,:DATA_ADMISSAO,:JORNADA_MENSAL,:SALARIO,:QUANT_DEPENDENTE,:FERIAS_VENCIDAS,:AD_PERICULOSIDADE,
+				ADIC_INSALUBRIDADE,:TIPO_TRCT,:TIPO_AVISO,:DATA_DEMISSAO,:QUANT_HORA_EXTRA,:SALDO_FGTS)");
 
 				
 				
@@ -61,11 +59,11 @@ VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]',
 		public function alterar($cont){
 			try{
 				$stmt = $this->con->prepare(
-				"UPDATE caddemandas SET nome=:nome, cpf=:cpf,
-				telefone=:telefone, email = :email,  data_nascimento=:data_nascimento,
-				sexo=:sexo WHERE
-				id=:id");
+				"UPDATE caddemandas 
+				SET CNPJ=:CNPJ, NOME=:NOME, CPF=:CPF, DATA_ADMISSAO=:DATA_ADMISSAO, JORNADA_MENSAL=:JORNADA_MENSAL, SALARIO=:SALARIO, QUANT_DEPENDENTE=:QUANT_DEPENDENTE, FERIAS_VENCIDAS=:FERIAS_VENCIDAS, AD_PERICULOSIDADE=:AD_PERICULOSIDADE, ADIC_INSALUBRIDADE=:ADIC_INSALUBRIDADE, TIPO_TRCT=:TIPO_TRCT, TIPO_AVISO=:TIPO_AVISO, DATA_DEMISSAO=:DATA_DEMISSAO, QUANT_HORA_EXTRA=:QUANT_HORA_EXTRA, SALDO_FGTS=:SALDO_FGTS
+				WHERE id=:id");
 				
+
 				//ligamos as âncoras aos valores de Contato
 				$stmt->bindValue(":ID", $cont->getId());
 				$stmt->bindValue(":CNPJ", $cont->getCnpj());
