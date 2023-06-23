@@ -101,7 +101,8 @@
 				echo "Erro: " . $ex->getMessage();
 			}
 		}
-		//excluir
+		
+		// excluir
 		public function excluir($cont){
 			try{
 				$num = $this->con->exec("DELETE FROM caddemandas WHERE id = " . $cont->getId());
@@ -117,6 +118,7 @@
 				echo "Erro: " . $ex->getMessage();
 			}
 		}
+
 	
 		//listar
 		public function listar($query = null){
@@ -183,22 +185,22 @@
 				
 				$c = new Funcionario();
 				
-				$c->setId($dado["ID"]);
-				$c->setCnpj($dado["CNPJ"]);
-				$c->setNome($dado["NOME"]);
-				$c->setCpf($dado["CPF"]);
-				$c->setDataAdmissao($dado["DATA_ADMISSAO"]);
-				$c->setJornadaMensal($dado["JORNADA_MENSAL"]);
-				$c->setSalario($dado["SALARIO"]);
-				$c->setQuantDependente($dado["QUANT_DEPENDENTE"]);
-				$c->setFeriasVencidas($dado["FERIAS_VENCIDAS"]);
-				$c->setAdPericulosidade($dado["AD_PERICULOSIDADE"]);
-				$c->setAdicInsalubridade($dado["ADIC_INSALUBRIDADE"]);
-				$c->setTipoTrct($dado["TIPO_TRCT"]);
-				$c->setTipoAviso($dado["TIPO_AVISO"]);
-				$c->setDataDemissao($dado["DATA_DEMISSAO"]);
-				$c->setQuantHoraExtra($dado["QUANT_HORA_EXTRA"]);
-				$c->setSaldoFGTS($dado["SALDO_FGTS"]);
+				$c->setId($dado[0]["ID"]);
+				$c->setCnpj($dado[0]["CNPJ"]);
+				$c->setNome($dado[0]["NOME"]);
+				$c->setCpf($dado[0]["CPF"]);
+				$c->setDataAdmissao($dado[0]["DATA_ADMISSAO"]);
+				$c->setJornadaMensal($dado[0]["JORNADA_MENSAL"]);
+				$c->setSalario($dado[0]["SALARIO"]);
+				$c->setQuantDependente($dado[0]["QUANT_DEPENDENTE"]);
+				$c->setFeriasVencidas($dado[0]["FERIAS_VENCIDAS"]);
+				$c->setAdPericulosidade($dado[0]["AD_PERICULOSIDADE"]);
+				$c->setAdicInsalubridade($dado[0]["ADIC_INSALUBRIDADE"]);
+				$c->setTipoTrct($dado[0]["TIPO_TRCT"]);
+				$c->setTipoAviso($dado[0]["TIPO_AVISO"]);
+				$c->setDataDemissao($dado[0]["DATA_DEMISSAO"]);
+				$c->setQuantHoraExtra($dado[0]["QUANT_HORA_EXTRA"]);
+				$c->setSaldoFGTS($dado[0]["SALDO_FGTS"]);
 
 				return $c;	
 			}
