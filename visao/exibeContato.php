@@ -12,13 +12,23 @@
 		
 		<H3> Funcionário <?php echo $cont->getNome(); ?> </H3>
 		<UL>
-			<LI>Nome: <?php echo $cont->getNome(); ?></LI>
+			<LI>ID: <?php echo $cont->getId(); ?></LI>
+			<LI>CNPJ: <?php echo $cont->getCnpj(); ?></LI>
+			<LI>NOME: <?php echo $cont->getNome(); ?></LI>
 			<LI>CPF: <?php echo $cont->getCpf(); ?></LI>
-			<LI>Telefone: <?php echo $cont->getTelefone(); ?></LI>
-			<LI>E-mail: <?php echo $cont->getEmail(); ?></LI>
-			<LI>Data Nascimento: <?php echo $cont->getDataNascimento(); ?></LI>
-			<LI>Sexo <?php echo $cont->getSexo(); ?></LI>
-		
+			<LI>DATA_ADMISSAO: <?php echo $cont->getDataAdmissao(); ?></LI>
+			<LI>DATA_ADMISSAO: <?php echo $cont->getDataAdmissao(); ?></LI>
+			<LI>JORNADA_MENSAL: <?php echo $cont->getJornadaMensal(); ?></LI>
+			<LI>SALARIO: <?php echo $cont->getSalario(); ?></LI>
+			<LI>QUANT_DEPENDENTE: <?php echo $cont->getQuantDependente(); ?></LI>
+			<LI>FERIAS_VENCIDAS: <?php echo $cont->getFeriasVencidas(); ?></LI>
+			<LI>AD_PERICULOSIDADE: <?php echo $cont->getAdPericulosidade(); ?></LI>
+			<LI>ADIC_INSALUBRIDADE: <?php echo $cont->getAdicInsalubridade(); ?></LI>
+			<LI>TIPO_TRCT: <?php echo $cont->getTipoTrct(); ?></LI>
+			<LI>DATA_DEMISSAO: <?php echo $cont->getTipoAviso(); ?></LI>
+			<LI>QUANT_HORA_EXTRA: <?php echo $cont->getDataDemissao(); ?></LI>
+			<LI>SALDO_FGTS: <?php echo $cont->getSaldoFGTS(); ?></LI>
+
 		</UL>
 		
 		
