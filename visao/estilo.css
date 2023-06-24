@@ -1,4 +1,5 @@
 #cabecalho{
+	width: 100%;
 	text-align: center;
 	background-color: #373737;
 	color: white;
@@ -32,5 +33,9 @@
 .camposInput{
 	display:flex;
 	flex-direction: column;
+}
+
+#btnBackCad{
+	margin-left: 20px;
 }
 

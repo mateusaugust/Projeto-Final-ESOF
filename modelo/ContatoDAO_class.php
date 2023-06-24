@@ -20,8 +20,7 @@
 			try{
 				$stmt = $this->con->prepare(
 				"INSERT INTO caddemandas(CNPJ, NOME, CPF, DATA_ADMISSAO, JORNADA_MENSAL, SALARIO, QUANT_DEPENDENTE, FERIAS_VENCIDAS, AD_PERICULOSIDADE, ADIC_INSALUBRIDADE, TIPO_TRCT, TIPO_AVISO, DATA_DEMISSAO, QUANT_HORA_EXTRA, SALDO_FGTS)
-				VALUES (:CNPJ,:NOME,:CPF,:DATA_ADMISSAO,:JORNADA_MENSAL,:SALARIO,:QUANT_DEPENDENTE,:FERIAS_VENCIDAS,:AD_PERICULOSIDADE,
-				ADIC_INSALUBRIDADE,:TIPO_TRCT,:TIPO_AVISO,:DATA_DEMISSAO,:QUANT_HORA_EXTRA,:SALDO_FGTS)");
+				VALUES (:CNPJ,:NOME,:CPF,:DATA_ADMISSAO,:JORNADA_MENSAL,:SALARIO,:QUANT_DEPENDENTE,:FERIAS_VENCIDAS,:AD_PERICULOSIDADE, :ADIC_INSALUBRIDADE,:TIPO_TRCT,:TIPO_AVISO,:DATA_DEMISSAO,:QUANT_HORA_EXTRA,:SALDO_FGTS)");
 
 				
 				
@@ -67,7 +66,7 @@
 				
 
 				//ligamos as âncoras aos valores de Contato
-				$stmt->bindValue(":ID", $cont->getId());
+			
 				$stmt->bindValue(":CNPJ", $cont->getCnpj());
 				$stmt->bindValue(":NOME", $cont->getNome());
 				$stmt->bindValue(":CPF", $cont->getCpf());
@@ -83,6 +82,7 @@
 				$stmt->bindValue(":DATA_DEMISSAO", $cont->getDataDemissao());
 				$stmt->bindValue(":QUANT_HORA_EXTRA", $cont->getQuantHoraExtra());
 				$stmt->bindValue(":SALDO_FGTS", $cont->getSaldoFGTS());
+				$stmt->bindValue(":id", $cont->getId());
 				
 				$this->con->beginTransaction();
 				//Inicia a transação

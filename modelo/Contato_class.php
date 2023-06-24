@@ -17,7 +17,7 @@
 		private $tipo_aviso;
 		private $data_demissao;
 		private $quant_hora_extra;
-		private $SaldoFGTS;
+		private $saldo_fgts;
 
 		
 		public function __construct(){
@@ -104,7 +104,7 @@
 		}
 
 		public function setAdicInsalubridade($adic_insalubridade){
-			$this->$adic_insalubridade = $adic_insalubridade;
+			$this->adic_insalubridade = $adic_insalubridade;
 		}
 		
 		public function getAdicInsalubridade(){
@@ -112,7 +112,7 @@
 		}
 
 		public function setTipoTrct($tipo_trct){
-			$this->$tipo_trct = $tipo_trct;
+			$this->tipo_trct = $tipo_trct;
 		}
 		
 		public function getTipoTrct(){
@@ -128,7 +128,7 @@
 		}
 
 		public function setDataDemissao($data_demissao){
-			$this->$data_demissao = $data_demissao;
+			$this->data_demissao = $data_demissao;
 		}
 		
 		public function getDataDemissao(){
@@ -144,13 +144,13 @@
 			return $this->adic_insalubridade;
 		}
 
-				public function setSaldoFGTS($SaldoFGTS){
-			$this->SaldoFGTS = $SaldoFGTS;
+				public function setSaldoFGTS($saldo_fgts){
+			$this->saldo_fgts = $saldo_fgts;
 		}
 		
 		
 		public function getSaldoFGTS(){
-			return $this->SaldoFGTS;
+			return $this->saldo_fgts;
 		}
 	}
 ?>

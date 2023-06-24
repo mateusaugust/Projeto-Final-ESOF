@@ -8,22 +8,21 @@
 				
 				$c = new Funcionario();
 	
-				$c->setId($_POST["ID"]);
-				$c->setCnpj($_POST["CNPJ"]);
-				$c->setNome($_POST["NOME"]);
-				$c->setCpf($_POST["CPF"]);
-				$c->setDataAdmissao($_POST["DATA_ADMISSAO"]);
-				$c->setJornadaMensal($_POST["JORNADA_MENSAL"]);
-				$c->setSalario($_POST["SALARIO"]);
-				$c->setQuantDependente($_POST["QUANT_DEPENDENTE"]);
-				$c->setFeriasVencidas($_POST["FERIAS_VENCIDAS"]);
-				$c->setAdPericulosidade($_POST["AD_PERICULOSIDADE"]);
-				$c->setAdicInsalubridade($_POST["ADIC_INSALUBRIDADE"]);
-				$c->setTipoTrct($_POST["TIPO_TRCT"]);
-				$c->setTipoAviso($_POST["TIPO_AVISO"]);
-				$c->setDataDemissao($_POST["DATA_DEMISSAO"]);
-				$c->setQuantHoraExtra($_POST["QUANT_HORA_EXTRA"]);
-				$c->setSaldoFGTS($_POST["SALDO_FGTS"]);
+				$c->setCnpj($_POST["cnpj"]);
+				$c->setNome($_POST["nome"]);
+				$c->setCpf($_POST["cpf"]);
+				$c->setDataAdmissao($_POST["data_admissao"]);
+				$c->setJornadaMensal($_POST["jornada_mensal"]);
+				$c->setSalario($_POST["salario"]);
+				$c->setQuantDependente($_POST["quant_dependente"]);
+				$c->setFeriasVencidas($_POST["ferias_vencidas"]);
+				$c->setAdPericulosidade($_POST["ad_periculosidade"]);
+				$c->setAdicInsalubridade($_POST["adic_insalubridade"]);
+				$c->setTipoTrct($_POST["tipo_trct"]);
+				$c->setTipoAviso($_POST["tipo_aviso"]);
+				$c->setDataDemissao($_POST["data_admissao"]);
+				$c->setQuantHoraExtra($_POST["quant_hora_extra"]);
+				$c->setSaldoFGTS($_POST["SaldoFGTS"]);
 			
 				
 				$dao = new ContatoDAO();
