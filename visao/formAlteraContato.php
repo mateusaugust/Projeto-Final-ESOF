@@ -13,12 +13,14 @@
 		
 		<H3> Alterar Contato (ID: <?php echo $cont->getId(); ?>)</H3>
 		
+		
 		<FORM action="contato.php?fun=alterar" method="POST">
-			
+		<INPUT type="hidden" name="id" id="id" value="<?php echo $c->getId(); ?>" />
 		<div id="gridStyle">
-	
+		
 			<div class="container">
 				<div class="row">
+				
 					<div class="col">
 						<LABEL for="cnpj"> CNPJ: </LABEL> 	<br />
 						<INPUT type="text" id="cnpj" name="cnpj"  
@@ -101,7 +103,8 @@
 						<label for="tipo_aviso">Tipo de Aviso:</label><br />
 						<select id="tipo_aviso" name="tipo_aviso">
 							<option value="Sem aviso"<?php if ($cont->getTipoAviso() === "Sem aviso") echo 'selected'; ?>>Sem aviso</option>
-							<option value="Aviso previo"<?php if ($cont->getTipoAviso() === "Aviso previo") echo 'selected'; ?>>Aviso previo</option>
+							<option value="Aviso previo trabalhado"<?php if ($cont->getTipoAviso() === "Aviso previo trabalhado") echo 'selected'; ?>>Aviso previo Trabalhado</option>
+							<option value="Aviso previo indenizado"<?php if ($cont->getTipoAviso() === "Aviso previo indenizado") echo 'selected'; ?>>Aviso previo Indenizado</option>
 						</select>
 					</div>
 

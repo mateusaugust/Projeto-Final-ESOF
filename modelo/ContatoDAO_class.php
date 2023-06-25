@@ -62,11 +62,13 @@
 				 SALARIO=:SALARIO, QUANT_DEPENDENTE=:QUANT_DEPENDENTE, FERIAS_VENCIDAS=:FERIAS_VENCIDAS,
 				  AD_PERICULOSIDADE=:AD_PERICULOSIDADE, ADIC_INSALUBRIDADE=:ADIC_INSALUBRIDADE, TIPO_TRCT=:TIPO_TRCT,
 				   TIPO_AVISO=:TIPO_AVISO, DATA_DEMISSAO=:DATA_DEMISSAO, QUANT_HORA_EXTRA=:QUANT_HORA_EXTRA, SALDO_FGTS=:SALDO_FGTS
-				WHERE id=:id");
+				WHERE id=:ID");
+			
 
-				
+			var_dump($cont);
 				//ligamos as âncoras aos valores de Contato
 			
+				//$stmt->bindValue(":ID", $cont->getId());
 				$stmt->bindValue(":CNPJ", $cont->getCnpj());
 				$stmt->bindValue(":NOME", $cont->getNome());
 				$stmt->bindValue(":CPF", $cont->getCpf());
@@ -82,7 +84,11 @@
 				$stmt->bindValue(":DATA_DEMISSAO", $cont->getDataDemissao());
 				$stmt->bindValue(":QUANT_HORA_EXTRA", $cont->getQuantHoraExtra());
 				$stmt->bindValue(":SALDO_FGTS", $cont->getSaldoFGTS());
-				$stmt->bindValue(":id", $cont->getId());
+				
+
+
+			//$stmt->debugDumpParams();
+			//echo $stmt->queryString;
 				
 				$this->con->beginTransaction();
 				//Inicia a transação
