@@ -65,7 +65,7 @@
 				WHERE id=:ID");
 			
 
-			var_dump($cont);
+			//var_dump($cont); usada para verificar conteudo do objeto $cont
 				//ligamos as âncoras aos valores de Contato
 			
 				$stmt->bindValue(":ID", $cont->getId());
