@@ -78,7 +78,7 @@
 
 		<div id="save">
 
-		<A href="contato.php?fun=cadastrar" > <button type="button" class="btn btn-secondary">Cadastrar</button> </A>
+		<A href="contato.php?fun=cadastrar" > <button type="button" class="btn btn-secondary">Cadastrar Demanda</button> </A>
 		</div>
 		
 	</BODY>
