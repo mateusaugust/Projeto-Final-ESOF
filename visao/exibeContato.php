@@ -26,7 +26,7 @@
 			<LI>Adicional de periculosidade: <?php echo $cont->getAdPericulosidade(); ?></LI>
 			<LI>Adicional de insalubridade: <?php echo $cont->getAdicInsalubridade(); ?></LI>
 			<LI>Tipo de rescisão: <?php echo $cont->getTipoTrct(); ?></LI>
-			<LI>nº de horas extras: <?php echo $cont->getDataDemissao(); ?></LI>
+			<LI>nº de horas extras: <?php echo $cont->getQuantHoraExtra(); ?></LI>
 			<LI>Saldo de FGTS: <?php echo $cont->getSaldoFGTS(); ?></LI>
 
 		</UL>
