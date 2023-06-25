@@ -141,7 +141,7 @@
 		
 		
 		public function getQuantHoraExtra(){
-			return $this->adic_insalubridade;
+			return $this->quant_hora_extra;
 		}
 
 				public function setSaldoFGTS($saldo_fgts){
