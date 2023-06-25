@@ -8,6 +8,7 @@
 				
 				$c = new Funcionario();
 	
+				$c->setId($_POST["id"]);
 				$c->setCnpj($_POST["cnpj"]);
 				$c->setNome($_POST["nome"]);
 				$c->setCpf($_POST["cpf"]);

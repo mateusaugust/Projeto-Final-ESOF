@@ -68,7 +68,7 @@
 			var_dump($cont);
 				//ligamos as âncoras aos valores de Contato
 			
-				//$stmt->bindValue(":ID", $cont->getId());
+				$stmt->bindValue(":ID", $cont->getId());
 				$stmt->bindValue(":CNPJ", $cont->getCnpj());
 				$stmt->bindValue(":NOME", $cont->getNome());
 				$stmt->bindValue(":CPF", $cont->getCpf());

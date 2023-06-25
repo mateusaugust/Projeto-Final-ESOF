@@ -11,16 +11,16 @@
 	</HEAD>
 	<BODY>
 		
-		<H3> Alterar Contato (ID: <?php echo $cont->getId(); ?>)</H3>
+		<H3> Alterar Contato</H3>
 		
 		
 		<FORM action="contato.php?fun=alterar" method="POST">
-		<INPUT type="hidden" name="id" id="id" value="<?php echo $c->getId(); ?>" />
+		<INPUT type="hidden" name="id" id="id" value="<?php echo $cont->getId(); ?>" />
+
 		<div id="gridStyle">
-		
 			<div class="container">
+
 				<div class="row">
-				
 					<div class="col">
 						<LABEL for="cnpj"> CNPJ: </LABEL> 	<br />
 						<INPUT type="text" id="cnpj" name="cnpj"  
