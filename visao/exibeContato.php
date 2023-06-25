@@ -12,22 +12,22 @@
 		
 		<H3> Funcionário <?php echo $cont->getNome(); ?> </H3>
 		<UL>
-			<LI>ID: <?php echo $cont->getId(); ?></LI>
+			<LI>Codigo: <?php echo $cont->getId(); ?></LI>
 			<LI>CNPJ: <?php echo $cont->getCnpj(); ?></LI>
-			<LI>NOME: <?php echo $cont->getNome(); ?></LI>
-			<LI>CPF: <?php echo $cont->getCpf(); ?></LI>
-			<LI>DATA_ADMISSAO: <?php echo $cont->getDataAdmissao(); ?></LI>
-			<LI>DATA_ADMISSAO: <?php echo $cont->getDataAdmissao(); ?></LI>
-			<LI>JORNADA_MENSAL: <?php echo $cont->getJornadaMensal(); ?></LI>
-			<LI>SALARIO: <?php echo $cont->getSalario(); ?></LI>
-			<LI>QUANT_DEPENDENTE: <?php echo $cont->getQuantDependente(); ?></LI>
-			<LI>FERIAS_VENCIDAS: <?php echo $cont->getFeriasVencidas(); ?></LI>
-			<LI>AD_PERICULOSIDADE: <?php echo $cont->getAdPericulosidade(); ?></LI>
-			<LI>ADIC_INSALUBRIDADE: <?php echo $cont->getAdicInsalubridade(); ?></LI>
-			<LI>TIPO_TRCT: <?php echo $cont->getTipoTrct(); ?></LI>
-			<LI>DATA_DEMISSAO: <?php echo $cont->getTipoAviso(); ?></LI>
-			<LI>QUANT_HORA_EXTRA: <?php echo $cont->getDataDemissao(); ?></LI>
-			<LI>SALDO_FGTS: <?php echo $cont->getSaldoFGTS(); ?></LI>
+			<LI>CPF: <?php echo $cont->getCpf(); ?> </LI>
+			<LI>Nome: <?php echo $cont->getNome(); ?> </LI>
+			<LI>Data de admissão: <?php echo $cont->getDataAdmissao(); ?></LI>
+			<LI>Data de Demissão: <?php echo $cont->getDataDemissao(); ?></LI>
+			<LI>Tpo de aviso: <?php echo $cont->getTipoAviso(); ?></LI>
+			<LI>Jornada Mensal: <?php echo $cont->getJornadaMensal(); ?></LI>
+			<LI>Salario: <?php echo $cont->getSalario(); ?></LI>
+			<LI>nº dependentes: <?php echo $cont->getQuantDependente(); ?></LI>
+			<LI>nº férias vencidas: <?php echo $cont->getFeriasVencidas(); ?></LI>
+			<LI>Adicional de periculosidade: <?php echo $cont->getAdPericulosidade(); ?></LI>
+			<LI>Adicional de insalubridade: <?php echo $cont->getAdicInsalubridade(); ?></LI>
+			<LI>Tipo de rescisão: <?php echo $cont->getTipoTrct(); ?></LI>
+			<LI>nº de horas extras: <?php echo $cont->getDataDemissao(); ?></LI>
+			<LI>Saldo de FGTS: <?php echo $cont->getSaldoFGTS(); ?></LI>
 
 		</UL>
 		

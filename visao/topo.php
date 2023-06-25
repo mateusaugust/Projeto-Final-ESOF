@@ -1,7 +1,7 @@
 <HTML>
 	
 	<HEAD>
-		<TITLE> Cadastro Funcionário </TITLE>
+		<TITLE> Cadastro de Demanda </TITLE>
 		<LINK rel="stylesheet" type="text/css" href="visao/estilo.css" />
 	</HEAD>
 	
@@ -9,7 +9,7 @@
 		<DIV id="geral">
 		
 			<DIV id="cabecalho">
-				<h1>Cadastro de Funcionários</h1>
+				<h1>Cadastro de Demanda</h1>
 			</DIV>
 		
 			</DIV>
