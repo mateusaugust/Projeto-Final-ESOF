@@ -33,7 +33,7 @@
 		
 		<div>
 			<A href="contato.php?fun=listar" > <button type="button" class="btn btn-secondary">Voltar</button> </A>
-			<A href="<chamadaSuafunção>" > <button type="button" class="btn btn-danger">Calcular</button> </A>
+			<A href="contato.php?fun=calcular" > <button type="button" class="btn btn-danger">Calcular</button> </A>
 		</div>
 	</BODY>
 	

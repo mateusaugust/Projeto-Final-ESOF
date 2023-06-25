@@ -1,6 +1,6 @@
 <?php
 
-include_once("funcoesCalculos.php");
+include_once("funcoes.php");
 
 
 $con = mysqli_connect("localhost", "root", "", "trabalhoesof");
