@@ -39,8 +39,8 @@ include_once("./visao/topo.php");
 			
 		}elseif($fun == "calcular") {
 			include_once("controle/calculos.php");
-			include_once("controle/ListarContato_class.php");
-			$pag = new ListarContato();
+			include_once("controle/ExibirContato_class.php");
+			$pag = new ExibirContato();
 			
 		} else {
 			include_once("controle/ListarContato_class.php");
