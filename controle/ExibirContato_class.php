@@ -1,4 +1,4 @@
-8<?php
+<?php
 
 	include_once("modelo/ContatoDAO_class.php");
 	
