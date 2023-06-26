@@ -37,7 +37,7 @@
 	
 			<a href="contato.php?fun=exibirCalc&id=<?php echo $cont->getId(); ?>">
     		<button type="button" class="btn btn-info">Visualizar Cálculo</button>
-=======</a>
+    </a>
 			
 			<a href="contato.php?fun=calcular&id=<?php echo $cont->getId(); ?>">
     		<button type="button" class="btn btn-danger">Calcular</button>
