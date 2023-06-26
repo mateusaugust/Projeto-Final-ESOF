@@ -1,6 +1,7 @@
 <?php
 
 include_once("funcoes.php");
+//include_once("exibeContato.php");
 
 
 $con = mysqli_connect("localhost", "root", "", "trabalhoesof");
@@ -9,7 +10,8 @@ $con = mysqli_connect("localhost", "root", "", "trabalhoesof");
 if (!$con) {
     die("Erro na conexão: " . mysqli_connect_error());
 }
-$id = 23;
+
+$id = 21;
 
 $sql = "SELECT * FROM caddemandas WHERE ID = " . $id;
 
