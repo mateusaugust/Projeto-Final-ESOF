@@ -1,7 +1,9 @@
 <?php
 
-include_once("funcoesCalculos.php");
 
+$id = $_GET["id"];
+
+include_once("funcoes.php");
 
 $con = mysqli_connect("localhost", "root", "", "trabalhoesof");
 
@@ -9,7 +11,8 @@ $con = mysqli_connect("localhost", "root", "", "trabalhoesof");
 if (!$con) {
     die("Erro na conexão: " . mysqli_connect_error());
 }
-$id = 23;
+
+//$id = 21;
 
 $sql = "SELECT * FROM caddemandas WHERE ID = " . $id;
 
@@ -93,4 +96,5 @@ while ($row = mysqli_fetch_assoc($resultado)) {
 */
 // Fechar a conexão com o banco de dados
 mysqli_close($con);
+
 ?>

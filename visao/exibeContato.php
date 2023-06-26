@@ -28,14 +28,19 @@
 			<LI>Tipo de rescisão: <?php echo $cont->getTipoTrct(); ?></LI>
 			<LI>nº de horas extras: <?php echo $cont->getQuantHoraExtra(); ?></LI>
 			<LI>Saldo de FGTS: <?php echo $cont->getSaldoFGTS(); ?></LI>
-
+			
 		</UL>
 		
 		<div>
 			<A href="contato.php?fun=listar" > <button type="button" class="btn btn-secondary">Voltar</button> </A>
-			<A href="<chamadaSuafunção>" > <button type="button" class="btn btn-danger">Calcular</button> </A>
+
+	
 			<a href="contato.php?fun=exibirCalc&id=<?php echo $cont->getId(); ?>">
     		<button type="button" class="btn btn-info">Visualizar Cálculo</button>
+=======</a>
+			
+			<a href="contato.php?fun=calcular&id=<?php echo $cont->getId(); ?>">
+    		<button type="button" class="btn btn-danger">Calcular</button>
 			</a>
 		</div>
 	</BODY>
