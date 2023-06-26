@@ -10,7 +10,7 @@
 
 	<BODY>
 		
-		<H3> Funcionário <?php echo $cont->getNome(); ?> </H3>
+		<H3>Informações Demanda</H3>
 		<UL>
 			<LI>Codigo: <?php echo $cont->getId(); ?></LI>
 			<LI>CNPJ: <?php echo $cont->getCnpj(); ?></LI>
