@@ -110,7 +110,9 @@
 		// excluir
 		public function excluir($cont){
 			try{
+				$num0 = $this->con->exec("DELETE FROM cadcalculos WHERE id_demanda = " . $cont->getId());
 				$num = $this->con->exec("DELETE FROM caddemandas WHERE id = " . $cont->getId());
+
 				//numero de linhas afetadas pelo comando
 				
 				if($num >= 1){
