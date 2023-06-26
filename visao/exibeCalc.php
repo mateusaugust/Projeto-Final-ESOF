@@ -6,36 +6,151 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
     crossorigin="anonymous">
+
+		<LINK rel="stylesheet" type="text/css" href="estilo.css" />
 	</HEAD>
 
 	<BODY>
 		
 		<H3>  Dados Calculo (<?php echo $cont->getIdDemanda(); ?>)</H3>
-		<UL>
-			<LI>ID DEMANDA: <?php echo $cont->getIdDemanda(); ?></LI>
-			<LI>SALARIO: <?php echo $cont->getSalario(); ?> </LI>
-			<LI>AVOS DECIMO TERCEIRO: <?php echo $cont->getAvosDecimoTerceiro(); ?> </LI>
-			<LI>DECIMO TERCEIRO: <?php echo $cont->getDecimoTerceiro(); ?></LI>
-			<LI>AVOS FERIAS: <?php echo $cont->getAvosFerias(); ?></LI>
-			<LI>FERIAS PROPORCIONAL: <?php echo $cont->getFeriasProporcional(); ?></LI>
-			<LI>FERIAS VENCIDAS: <?php echo $cont->getFeriasVencidas(); ?></LI>
-			<LI>TERÇO FERIAS: <?php echo $cont->getTercoFerias(); ?></LI>
-			<LI>DIAS DE AVISO PREVIO: <?php echo $cont->getDiasAvisoPrevio(); ?></LI>
-			<LI>AVISO PREVIO: <?php echo $cont->getAvisoPrevio(); ?></LI>
-			<LI>QUANTIDADES DE HORAS EXTRAS: <?php echo $cont->getQuantidadesHorasExtras(); ?></LI>
-			<LI>VALOR DE HORAS EXTRAS: <?php echo $cont->getValorHorasExtras(); ?></LI>
-			<LI>DSR HORAS EXTRAS: <?php echo $cont->getDsrHorasExtras(); ?></LI>
-			<LI>PERCENTUAL DE INSALUBRIDADE: <?php echo $cont->getPercInsalubridade(); ?></LI>
-			<LI>VALOR INSALUBRIDADE: <?php echo $cont->getValorInsalubridade(); ?></LI>
-      <LI>VALOR PERICULOSIDADE: <?php echo $cont->getValorPericulosidade(); ?></LI>
-      <LI>SALARIO FAMILIA: <?php echo $cont->getSalarioFamilia(); ?></LI>
-      <LI>INSS SALARIO: <?php echo $cont->getInssSalario(); ?></LI>
-      <LI>INSS: <?php echo $cont->getInss13(); ?></LI>
-      <LI>IR: <?php echo $cont->getIr(); ?></LI>
 
-		</UL>
+		<div id="tableCalc">
+			<table class="table">
+  			<thead>
+   			 	<tr>
+      			<th scope="col">Descriminação</th>
+      			<th scope="col">Referencia</th>
+      			<th scope="col">Proventos</th>
+						<th scope="col">Descontos</th>
+   		 		</tr>
+  			</thead>
+				<tbody>
+					<tr>
+						<td>Salario</td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getSalario(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Decimo Terceiro</td>
+						<td><?php echo round($cont->getAvosDecimoTerceiro(),2); ?></td>
+						<td>R$ <?php echo round($cont->getDecimoTerceiro(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Férias</td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getFeriasVencidas(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Férias Proporcionais</td>
+						<td><?php echo round($cont->getAvosFerias(),2); ?></td>
+						<td>R$  <?php echo round($cont->getFeriasProporcional(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Terço de Férias</td>
+						<td><?php echo round($cont->getAvosFerias(),2); ?></td>
+						<td>R$ <?php echo round($cont->getTercoFerias(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Dias de Aviso Previo</td>
+						<td><?php echo round($cont->getDiasAvisoPrevio(),2); ?></td>
+						<td>R$ <?php echo round($cont->getAvisoPrevio(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Horas Extras 50%</td>
+						<td><?php echo round($cont->getQuantidadesHorasExtras(),2); ?></td>
+						<td>R$  <?php echo round($cont->getValorHorasExtras(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>DSR</td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getDsrHorasExtras(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Insalubridade</td>
+						<td><?php echo round($cont->getPercInsalubridade(),2); ?></td>
+						<td>R$ <?php echo round($cont->getValorInsalubridade(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Periculosidade</td>
+						<td> 30 </td>
+						<td>R$ <?php echo round($cont->getValorPericulosidade(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>Salario Familia</td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getSalarioFamilia(),2); ?></td>
+						<td> - </td>
+					</tr>
+
+					<tr>
+						<td>INSS Salario</td>
+						<td> - </td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getInssSalario(),2); ?></td>
+					</tr>
+
+					<tr>
+						<td>INSS 13°</td>
+						<td> - </td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getInss13(),2); ?></td>
+					</tr>
+
+					<tr>
+						<td>Imposto de Renda</td>
+						<td> - </td>
+						<td> - </td>
+						<td>R$ <?php echo round($cont->getIr(),2); ?></td>
+					</tr>
+
+					<tr>
+						<td>Total</td>
+						<td> - </td>
+						<td> 
+						R$ <?php echo round($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
+							$cont->getFeriasVencidas() + $cont->getTercoFerias() + $cont->getAvisoPrevio() + $cont->getValorHorasExtras() + 
+							$cont->getDsrHorasExtras() + $cont->getValorInsalubridade() + $cont->getValorPericulosidade() + $cont->getSalarioFamilia(),2); ?>
+						</td>
+						<td> R$ <?php echo round($cont->getInssSalario() + $cont->getInss13() + $cont->getIr(),2)?> </td>
+					</tr>
+
+					<tr>
+						<td>Valor Liquido</td>
+						<td> - </td>
+						<td>
+							R$ <?php echo round(($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
+							$cont->getFeriasVencidas() + $cont->getTercoFerias() + $cont->getAvisoPrevio() + $cont->getValorHorasExtras() + 
+							$cont->getDsrHorasExtras() + $cont->getValorInsalubridade() + $cont->getValorPericulosidade() + $cont->getSalarioFamilia()) - 
+							($cont->getInssSalario() + $cont->getInss13() + $cont->getIr()),2) ;?>
+						</td>
+						<td> - </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		
-		<div>
+		
+		<div id="btnVoltar">
 			<A href="contato.php?fun=listar" > <button type="button" class="btn btn-secondary">Voltar</button> </A>
 		</div>
 	</BODY>
