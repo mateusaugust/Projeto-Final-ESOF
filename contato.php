@@ -37,6 +37,11 @@ include_once("./visao/topo.php");
 			include_once("controle/ExibirContato_class.php");
 			$pag = new ExibirContato();
 			
+		}elseif($fun == "calcular") {
+			include_once("controle/calculos.php");
+			include_once("controle/ListarContato_class.php");
+			$pag = new ListarContato();
+			
 		} else {
 			include_once("controle/ListarContato_class.php");
 			$pag = new ListarContato();			

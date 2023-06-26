@@ -34,6 +34,7 @@
 		<div>
 			<A href="contato.php?fun=listar" > <button type="button" class="btn btn-secondary">Voltar</button> </A>
 			<A href="contato.php?fun=calcular" > <button type="button" class="btn btn-danger">Calcular</button> </A>
+			<A href="contato.php?fun=calcular&id=" . $cont->getId()> <button type="button" class="btn btn-danger">Calcular11</button> </A>
 		</div>
 	</BODY>
 	
