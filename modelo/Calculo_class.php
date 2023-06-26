@@ -31,7 +31,7 @@
     }
 
     public function getValorInsalubridade(){
-      return this ->valor_insalubridade;
+      return $this ->valor_insalubridade;
     }
     
 
@@ -40,7 +40,7 @@
     }
 
     public function getIdDemanda(){
-      return this ->id_demanda;
+      return $this ->id_demanda;
     }
 
     public function setSalario($salario){
@@ -48,7 +48,7 @@
     }
 
     public function getSalario(){
-      return this -> salario;
+      return $this -> salario;
     }
 
     public function setAvosDecimoTerceiro($avos_decimo_terceiro){
@@ -56,7 +56,7 @@
     }
 
     public function getAvosDecimoTerceiro(){
-      return this -> avos_decimo_terceiro;
+      return $this -> avos_decimo_terceiro;
     }
 
     public function setDecimoTerceiro($decimo_terceiro){
@@ -64,7 +64,7 @@
     }
 
     public function getDecimoTerceiro(){
-      return this -> decimo_terceiro;
+      return $this -> decimo_terceiro;
     }
 
     public function setAvosFerias($avos_ferias){
@@ -72,7 +72,7 @@
     }
 
     public function getAvosFerias(){
-      return this -> avos_ferias;
+      return $this -> avos_ferias;
     }
 
     public function setFeriasProporcional($ferias_proporcional){
@@ -80,7 +80,7 @@
     }
   
   public function getFeriasProporcional(){
-      return this->ferias_proporcional;
+      return $this->ferias_proporcional;
   }
   
   public function setFeriasVencidas($ferias_vencidas){
@@ -88,7 +88,7 @@
   }
   
   public function getFeriasVencidas(){
-      return this->ferias_vencidas;
+      return $this->ferias_vencidas;
   }
   
   public function setTercoFerias($terco_ferias){
@@ -96,7 +96,7 @@
   }
   
   public function getTercoFerias(){
-      return this->terco_ferias;
+      return $this->terco_ferias;
   }
   
   public function setDiasAvisoPrevio($dias_aviso_previo){
@@ -104,7 +104,7 @@
   }
   
   public function getDiasAvisoPrevio(){
-      return this->dias_aviso_previo;
+      return $this->dias_aviso_previo;
   }
   
   public function setAvisoPrevio($aviso_previo){
@@ -112,7 +112,7 @@
   }
   
   public function getAvisoPrevio(){
-      return this->aviso_previo;
+      return $this->aviso_previo;
   }
   
   public function setQuantidadesHorasExtras($quantidades_horas_extras){
@@ -120,7 +120,7 @@
   }
   
   public function getQuantidadesHorasExtras(){
-      return this->quantidades_horas_extras;
+      return $this->quantidades_horas_extras;
   }
   
   public function setValorHorasExtras($valor_horas_extras){
@@ -128,7 +128,7 @@
   }
   
   public function getValorHorasExtras(){
-      return this->valor_horas_extras;
+      return $this->valor_horas_extras;
   }
   
   public function setDsrHorasExtras($dsr_horas_extras){
@@ -136,7 +136,7 @@
   }
   
   public function getDsrHorasExtras(){
-      return this->dsr_horas_extras;
+      return $this->dsr_horas_extras;
   }
   
   public function setPercInsalubridade($perc_insalubridade){
@@ -152,7 +152,7 @@
   }
   
   public function getValorPericulosidade(){
-      return this->valor_periculosidade;
+      return $this->valor_periculosidade;
   }
   
   public function setSalarioFamilia($salario_familia){
@@ -160,7 +160,7 @@
   }
   
   public function getSalarioFamilia(){
-      return this->salario_familia;
+      return $this->salario_familia;
   }
   
   public function setInssSalario($inss_salario){
@@ -168,7 +168,7 @@
   }
   
   public function getInssSalario(){
-      return this->inss_salario;
+      return $this->inss_salario;
   }
   
   public function setInss13($inss_13){
@@ -176,7 +176,7 @@
   }
   
   public function getInss13(){
-      return this->inss_13;
+      return $this->inss_13;
   }
   
   public function setIr($ir){
@@ -184,7 +184,7 @@
   }
   
   public function getIr(){
-      return this->ir;
+      return $this->ir;
   }
   
 	}
