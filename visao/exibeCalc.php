@@ -1,7 +1,7 @@
 <HTML>
 
 	<HEAD>
-		<TITLE> Dados Calculo (<?php echo $cont->getIdDemanda(); ?>) </TITLE>
+		<TITLE> Dados Calculo</TITLE>
 		<link rel="stylesheet" 
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
@@ -10,9 +10,9 @@
 
 	<BODY>
 		
-		<H3>  Dados Calculo (<?php echo $cont1->getIdDemanda(); ?>) ?> </H3>
+		<H3>  Dados Calculo (<?php echo $cont->getIdDemanda(); ?>) ?> </H3>
 		<UL>
-			<LI>ID DEMANDA: <?php echo $cont1->getIdDemanda(); ?></LI>
+			<LI>ID DEMANDA: <?php echo $cont->getIdDemanda(); ?></LI>
 			<LI>SALARIO: <?php echo $cont1->getSalario(); ?> </LI>
 			<LI>AVOS DECIMO TERCEIRO: <?php echo $cont1->getAvosDecimoTerceiro(); ?> </LI>
 			<LI>DECIMO TERCEIRO: <?php echo $cont1->getDecimoTerceiro(); ?></LI>
