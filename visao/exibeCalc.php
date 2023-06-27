@@ -12,10 +12,10 @@
 
 	<BODY>
 		
-		<H3>  Dados Calculo (<?php echo $cont->getIdDemanda(); ?>)</H3>
+	<H3>  Calculo demanda (<?php echo $cont->getIdDemanda(); ?>)</H3>
 
 		<div id="tableCalc">
-			<table class="table">
+			<table class="table table-striped">
   			<thead>
    			 	<tr>
       			<th scope="col">Descriminação</th>
@@ -26,79 +26,79 @@
   			</thead>
 				<tbody>
 					<tr>
-						<td>Salario</td>
-						<td> - </td>
-						<td>R$ <?php echo round($cont->getSalario(),2); ?></td>
-						<td> - </td>
+					<td>Salario</td>
+					<td> - </td>
+					<td>R$ <?php echo number_format(round($cont->getSalario(), 2), 2, ',', '.'); ?></td>
+					<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Decimo Terceiro</td>
 						<td><?php echo round($cont->getAvosDecimoTerceiro(),2); ?></td>
-						<td>R$ <?php echo round($cont->getDecimoTerceiro(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getDecimoTerceiro(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Férias</td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getFeriasVencidas(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getFeriasVencidas(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Férias Proporcionais</td>
 						<td><?php echo round($cont->getAvosFerias(),2); ?></td>
-						<td>R$  <?php echo round($cont->getFeriasProporcional(),2); ?></td>
+						<td>R$  <?php echo number_format(round($cont->getFeriasProporcional(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Terço de Férias</td>
-						<td><?php echo round($cont->getAvosFerias(),2); ?></td>
-						<td>R$ <?php echo round($cont->getTercoFerias(),2); ?></td>
+						<td> - </td>
+						<td>R$ <?php echo number_format(round($cont->getTercoFerias(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
-						<td>Dias de Aviso Previo</td>
+						<td>Aviso Previo</td>
 						<td><?php echo round($cont->getDiasAvisoPrevio(),2); ?></td>
-						<td>R$ <?php echo round($cont->getAvisoPrevio(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getAvisoPrevio(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Horas Extras 50%</td>
 						<td><?php echo round($cont->getQuantidadesHorasExtras(),2); ?></td>
-						<td>R$  <?php echo round($cont->getValorHorasExtras(),2); ?></td>
+						<td>R$  <?php echo number_format(round($cont->getValorHorasExtras(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>DSR</td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getDsrHorasExtras(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getDsrHorasExtras(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
-						<td>Insalubridade</td>
+						<td>Adicional de Insalubridade</td>
 						<td><?php echo round($cont->getPercInsalubridade(),2); ?></td>
-						<td>R$ <?php echo round($cont->getValorInsalubridade(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getValorInsalubridade(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
-						<td>Periculosidade</td>
+						<td>Adicional de Periculosidade</td>
 						<td> 30 </td>
-						<td>R$ <?php echo round($cont->getValorPericulosidade(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getValorPericulosidade(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
 					<tr>
 						<td>Salario Familia</td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getSalarioFamilia(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getSalarioFamilia(),2), 2, ',', '.'); ?></td>
 						<td> - </td>
 					</tr>
 
@@ -106,42 +106,42 @@
 						<td>INSS Salario</td>
 						<td> - </td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getInssSalario(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getInssSalario(),2), 2, ',', '.'); ?></td>
 					</tr>
 
 					<tr>
 						<td>INSS 13°</td>
 						<td> - </td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getInss13(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getInss13(),2), 2, ',', '.'); ?></td>
 					</tr>
 
 					<tr>
 						<td>Imposto de Renda</td>
 						<td> - </td>
 						<td> - </td>
-						<td>R$ <?php echo round($cont->getIr(),2); ?></td>
+						<td>R$ <?php echo number_format(round($cont->getIr(),2), 2, ',', '.'); ?></td>
 					</tr>
 
 					<tr>
 						<td>Total</td>
 						<td> - </td>
 						<td> 
-						R$ <?php echo round($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
+						R$ <?php echo number_format(round($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
 							$cont->getFeriasVencidas() + $cont->getTercoFerias() + $cont->getAvisoPrevio() + $cont->getValorHorasExtras() + 
-							$cont->getDsrHorasExtras() + $cont->getValorInsalubridade() + $cont->getValorPericulosidade() + $cont->getSalarioFamilia(),2); ?>
+							$cont->getDsrHorasExtras() + $cont->getValorInsalubridade() + $cont->getValorPericulosidade() + $cont->getSalarioFamilia(),2), 2, ',', '.'); ?>
 						</td>
-						<td> R$ <?php echo round($cont->getInssSalario() + $cont->getInss13() + $cont->getIr(),2)?> </td>
+						<td> R$ <?php echo number_format(round($cont->getInssSalario() + $cont->getInss13() + $cont->getIr(),2), 2, ',', '.');?> </td>
 					</tr>
 
 					<tr>
 						<td>Valor Liquido</td>
 						<td> - </td>
 						<td>
-							R$ <?php echo round(($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
+							R$ <?php echo number_format(round(($cont->getSalario() + $cont->getDecimoTerceiro() + $cont->getFeriasProporcional() + 
 							$cont->getFeriasVencidas() + $cont->getTercoFerias() + $cont->getAvisoPrevio() + $cont->getValorHorasExtras() + 
 							$cont->getDsrHorasExtras() + $cont->getValorInsalubridade() + $cont->getValorPericulosidade() + $cont->getSalarioFamilia()) - 
-							($cont->getInssSalario() + $cont->getInss13() + $cont->getIr()),2) ;?>
+							($cont->getInssSalario() + $cont->getInss13() + $cont->getIr()),2) , 2, ',', '.');?>
 						</td>
 						<td> - </td>
 					</tr>

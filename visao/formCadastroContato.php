@@ -95,7 +95,8 @@
 						<label for="tipo_aviso">Tipo de Aviso:</label><br />
 						<select id="tipo_aviso" name="tipo_aviso">
 							<option value="Sem aviso">Sem Aviso</option>
-							<option value="Aviso previo">Aviso Prévio</option>
+							<option value="Aviso previo trabalhado">Aviso previo trabalhado</option>
+							<option value="Aviso previo indenizado">Aviso previo indenizado</option>
 						</select>
 					</div>
 

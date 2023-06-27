@@ -180,7 +180,7 @@ for ($i; $i < 13; $i++) {
 	}   	
     }
 }
-echo $contAvos+$ultimoAvo;
+//echo $contAvos+$ultimoAvo;
 return $contAvos+$ultimoAvo;
 }
 

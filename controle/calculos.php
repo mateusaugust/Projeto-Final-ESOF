@@ -39,10 +39,14 @@ $feriasVencidas = $row['SALARIO']*$quantFeriasVencidas;
 $tercoFerias = ($feriasVencidas + $valorFeriasProporcionais) / 3;
 
 //calculo de aviso previo normal
+if($row['TIPO_AVISO'] == "Aviso previo indenizado"){
 $diasAvisoPrevio = calcularDiasAviso($row['DATA_ADMISSAO'],$row['DATA_DEMISSAO']);
 
 $valorAvisoPrevio = calculaValorAvisoPrevioIndenizado($row['SALARIO'],$diasAvisoPrevio);
-
+}else{
+    $diasAvisoPrevio = 0;
+    $valorAvisoPrevio = 0;
+}
 //calculo avos de férias e 13º sobre aviso previo
 $dtDemissaoProjetada = adicionarDias($row['DATA_DEMISSAO'],$diasAvisoPrevio);
 

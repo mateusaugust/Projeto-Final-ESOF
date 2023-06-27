@@ -1,6 +1,6 @@
 <HTML>
 	<HEAD>
-		<TITLE> Listagem de Contatos </TITLE>
+		<TITLE> Listagem de demanda </TITLE>
 		<META charset="UTF-8" />
 		<link rel="stylesheet" 
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
@@ -12,7 +12,7 @@
 	<BODY>
 		
 	
-		<TABLE border="1px" id="tabelaInicio">
+		<TABLE border="1px" id="tabelaInicio" class="">
 			<TR> 
 				<TH> ID </TH>
 				<TH> CNPJ </TH>
